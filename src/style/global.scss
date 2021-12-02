@@ -1,0 +1,23 @@
+// 定义基础屏幕分辨率变量
+$vw_base: 5760;
+$vh_base: 1080;
+
+// 计算视口宽度,vw()中的参数，直接传像素值
+@function vw($px) {
+    @return ($px / $vw_base) * 100vw;
+}
+
+// 计算视口高度, vh()中的参数，直接传像素值
+@function vh($px) {
+    @return ($px / $vh_base) * 100vh;
+}
+
+* {
+    moz-user-select: -moz-none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
